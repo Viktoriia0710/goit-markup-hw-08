@@ -1,0 +1,127 @@
+.portfolio {
+  border: 1px solid #ececec;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.nav-btn:not(:last-child) {
+  margin-right: 8px;
+}
+.section-portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.port-image {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: 370px;
+}
+.port-image a {
+  display: block;
+}
+.port-image:nth-child(3n) {
+  margin-right: 0px;
+}
+.port-image:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+.button-portfolio {
+  padding: 6px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $main-font-color;
+  background: $bcg-section-team;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background: $color-accent;
+    color: $main-white-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+.port-content {
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
+}
+.card {
+  margin-bottom: 4px;
+}
+.port-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+  color: $main-grey-color;
+}
+.port-cards {
+  display: block;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover .overlay,
+  &:focus .overlay {
+    transform: translateY(0);
+  }
+}
+.section-portfolio h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $main-font-color;
+}
+.section-portfolio .p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+  color: $main-grey-color;
+}
+.thumb {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.555;
+  letter-spacing: 0.03em;
+  color: $main-white-color;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+  transition-property: transform;
+}

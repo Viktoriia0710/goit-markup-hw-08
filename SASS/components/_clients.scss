@@ -1,0 +1,44 @@
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.companies {
+  display: flex;
+}
+.border-pic {
+  color: inherit;
+}
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 170px;
+  height: 90px;
+  fill: rgba(175, 177, 184, 1);
+
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $color-accent;
+    color: $color-accent;
+    border: 1px solid $color-accent;
+  }
+}
+
+.border:not(:last-child) {
+  margin-right: 30px;
+}
+.text {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.166;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $main-font-color;
+  margin-bottom: 50px;
+}

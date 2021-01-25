@@ -1,0 +1,44 @@
+.advantages {
+  display: flex;
+}
+.section {
+  padding-top: 94px;
+}
+.advantages .subject {
+  width: 270px;
+}
+.subtitle {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.subject:not(:last-child) {
+  margin-right: 30px;
+}
+.subject-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bcg-icons-index;
+  border-radius: 4px;
+  width: 270px;
+  height: 120px;
+}
+.userpic {
+  width: 70px;
+  height: 70px;
+}
+.section h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $main-font-color;
+}
+.section p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: $main-grey-color;
+}

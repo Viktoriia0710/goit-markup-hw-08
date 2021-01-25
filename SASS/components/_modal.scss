@@ -1,0 +1,222 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  opacity: 1;
+
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px 40px;
+  transform: translate(-50%, -50%) scale(1);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  min-width: 528px;
+  min-height: 581px;
+  background: $main-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form-title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $main-font-color;
+}
+.field .icon {
+  position: absolute;
+  display: inline-block;
+  bottom: 11px;
+  left: 12px;
+  fill: $main-font-color;
+}
+.field + .field {
+  margin-top: 10px;
+}
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: $main-grey-color;
+}
+.input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 42px;
+  box-sizing: border-box;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: text;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    outline: none;
+    border-color: $color-accent;
+    fill: $color-accent;
+  }
+}
+.icon {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    fill: $color-accent;
+    color: $color-accent;
+  }
+}
+.input:focus + .icon {
+  fill: $color-accent;
+  color: $color-accent;
+}
+.comment {
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  resize: none;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.166;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  background: $main-white-color;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    fill: $color-accent;
+  }
+}
+.checkbox {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+  & a {
+    text-decoration: underline;
+    color: $color-accent;
+  }
+}
+
+.check-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.check-input:checked + .check-text::before {
+  background-color: $color-accent;
+  border: 0;
+  background-image: url(../images/img/iconCheck.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.check-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: $main-grey-color;
+}
+
+.check-text {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: $main-grey-color;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+    border: 2px solid $main-font-color;
+    border-radius: 2px;
+  }
+}
+
+.btn-form {
+  display: block;
+  width: 200px;
+  height: 50px;
+  padding: 10px 55px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: $main-white-color;
+
+  background: $color-accent;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  cursor: pointer;
+}
