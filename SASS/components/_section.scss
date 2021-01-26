@@ -1,41 +1,74 @@
-.advantages {
-  display: flex;
-}
 .section {
-  padding-top: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
-.advantages .subject {
-  width: 270px;
+.advantages {
+  margin: -15px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    margin: 15px;
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 2 * 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 4 * 30px) / 4);
+    }
+  }
 }
-.subtitle {
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-.subject:not(:last-child) {
-  margin-right: 30px;
-}
+
+// .subtitle {
+//   margin-top: 30px;
+//   margin-bottom: 10px;
+// }
+// .subject:not(:last-child) {
+//   margin-right: 30px;
+// }
 .subject-icons {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
+
   background-color: $bcg-icons-index;
   border-radius: 4px;
-  width: 270px;
   height: 120px;
 }
 .userpic {
   width: 70px;
   height: 70px;
 }
+
 .section h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.142;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $main-font-color;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 .section p {
+  margin-top: 0;
+  margin-bottom: 0;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
