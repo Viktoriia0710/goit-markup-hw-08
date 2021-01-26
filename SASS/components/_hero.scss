@@ -11,7 +11,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url();
+    url("/images/img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -37,7 +37,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(/images/bg@2x.jpg);
+      url("/images/bg@2x.jpg");
   }
 }
 .description {
@@ -49,6 +49,7 @@
   line-height: 1.615;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: $main-white-color;
 
   @media screen and (min-width: 1200px) {
     font-size: 44px;
