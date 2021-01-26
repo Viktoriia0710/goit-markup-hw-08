@@ -1071,6 +1071,10 @@ header-nav {
 .form {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
 }
 
 .form-title {
@@ -1111,8 +1115,8 @@ header-nav {
 }
 
 .input {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   padding-left: 42px;
   box-sizing: border-box;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1217,21 +1221,19 @@ header-nav {
 }
 
 .check-text {
+  display: flex;
+  align-items: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.166;
   letter-spacing: 0.03em;
   color: #757575;
 }
 
-.check-text {
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-  color: #757575;
+@media screen and (max-width: 767px) {
+  .check-text {
+    display: block;
+  }
 }
 
 .check-text::before {
@@ -1245,9 +1247,7 @@ header-nav {
 }
 
 .btn-form {
-  display: block;
-  width: 200px;
-  height: 50px;
+  display: flex;
   padding: 10px 55px;
   font-weight: 700;
   font-size: 16px;
